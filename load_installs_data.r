@@ -35,7 +35,7 @@ rbind.all.columns <- function(x, y) {
 install_directory = "~/Dropbox/Google Play Console Reports/reports/catrobat/pocketcode/installs/"
 install_filenames = list.files(install_directory, pattern = "^installs_org\\.catrobat\\.catroid_.*overview.csv$")
 full_install_filenames <- paste(install_directory, install_filenames, sep="")
-installs <- lapply(full_install_filenames, read.csv, fileEncoding="UTF-16")
+installs <- lapply(full_install_filenames, read.csv, fileEncoding="UTF-16", colClasses=c("Date"="Date"))
 
 # We need to decide whether to use all the data, or only what's common.
 # Google doesn't complete some columns even though they are provided
