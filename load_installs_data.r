@@ -3,6 +3,8 @@
 # Functions from
 # https://amywhiteheadresearch.wordpress.com/2013/05/13/combining-dataframes-when-the-columns-dont-match/
 
+require(flipTime)
+
 rbind.match.columns <- function(input1, input2) {
     n.input1 <- ncol(input1)
     n.input2 <- ncol(input2)
@@ -18,7 +20,7 @@ rbind.match.columns <- function(input1, input2) {
     return(rbind(input1[, column.names], input2[, column.names]))
 }
  
-nd.all.columns <- function(x, y) {
+rbind.all.columns <- function(x, y) {
  
     x.diff <- setdiff(colnames(x), colnames(y))
     y.diff <- setdiff(colnames(y), colnames(x))

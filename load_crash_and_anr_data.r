@@ -1,3 +1,4 @@
+require(flipTime)
 directory = "~/Dropbox/Google Play Console Reports/reports/catrobat/pocketcode/crashes/"
 filenames = list.files(directory, pattern = "^crashes_org\\.catrobat\\.catroid_.*overview.csv$")
 full_filenames <- paste(directory, filenames, sep="")
